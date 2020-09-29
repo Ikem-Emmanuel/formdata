@@ -1908,175 +1908,6 @@ module.exports = {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormFields__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormFields */ "./resources/js/components/FormFields.vue");
-/* harmony import */ var _props__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./props */ "./resources/js/components/props.js");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'Form',
-  components: {
-    FormFields: _FormFields__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
-  data: function data() {
-    return {
-      schoolProps: _props__WEBPACK_IMPORTED_MODULE_1__["schoolProps"],
-      fields: {}
-    };
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    this.enableSort = true;
-    axios.get('http://127.0.0.1:8000/api/schools').then(function (response) {
-      _this.schoolProps.universityDetails = response.data;
-      console.log(_this.schoolProps.universityDetails);
-    })["catch"](function (error) {
-      console.log(error);
-      _this.errored = true;
-    })["finally"](function () {
-      return _this.loading = false;
-    });
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormFields.vue?vue&type=script&lang=js&":
-/*!*********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormFields.vue?vue&type=script&lang=js& ***!
-  \*********************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormOne__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormOne */ "./resources/js/components/FormOne.vue");
-/* harmony import */ var _FormTwo__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTwo */ "./resources/js/components/FormTwo.vue");
-/* harmony import */ var _props__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./props */ "./resources/js/components/props.js");
-/* harmony import */ var _FormThree__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FormThree */ "./resources/js/components/FormThree.vue");
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: "FormFields",
-  components: {
-    FormThree: _FormThree__WEBPACK_IMPORTED_MODULE_3__["default"],
-    FormOne: _FormOne__WEBPACK_IMPORTED_MODULE_0__["default"],
-    FormTwo: _FormTwo__WEBPACK_IMPORTED_MODULE_1__["default"]
-  },
-  data: function data() {
-    return {
-      schoolProps: _props__WEBPACK_IMPORTED_MODULE_2__["schoolProps"]
-    };
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormOne.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormOne.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: "FormOne",
-  data: function data() {
-    return {
-      fields: {
-        university_name: 'Select a School',
-        graduationYear: 2020
-      }
-    };
-  },
-  props: {
-    universityDetails: Object,
-    universities: Array,
-    faculties: Array,
-    loading: Boolean,
-    errored: Boolean,
-    enableSort: Boolean,
-    sorting: Number
-  }
-});
-
-/***/ }),
-
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormThree.vue?vue&type=script&lang=js&":
-/*!********************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormThree.vue?vue&type=script&lang=js& ***!
-  \********************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue2_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue2-datepicker */ "./node_modules/vue2-datepicker/index.esm.js");
 /* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue2-datepicker/index.css */ "./node_modules/vue2-datepicker/index.css");
 /* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_1__);
@@ -2102,92 +1933,233 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "FormThree",
-  components: {
-    DatePicker: vue2_datepicker__WEBPACK_IMPORTED_MODULE_0__["default"]
-  },
-  props: {
-    universityDetails: Object
-  },
+  name: 'Form',
   data: function data() {
     return {
-      date: '',
-      yearOfAdmission: ''
+      fields: {
+        degree: 'Select a Degree',
+        department: 'Select a Department',
+        faculty: 'Select a Faculty',
+        "class": 'Select a Class',
+        dateOfbirth: 'Select a Date of Birth',
+        firstname: 'Enter Student Firstname',
+        lastname: 'Enter Student Lastname',
+        middlename: 'Enter Student Middlename',
+        yearOfAdmission: 'Select a year of Admission',
+        university_name: 'Select a University Name',
+        yearOfgraduation: 'Select a year of Graduation'
+      },
+      universityDetails: {},
+      date: 2020,
+      loading: true,
+      success: false,
+      errors: {},
+      isActive: false,
+      enableSort: false,
+      sorting: -5
     };
-  }
-});
+  },
+  mounted: function mounted() {
+    var _this = this;
 
-/***/ }),
+    this.enableSort = true;
+    axios.get('/api/schools').then(function (response) {
+      _this.universityDetails = response.data;
+      console.log(_this.universityDetails);
+    })["catch"](function (error) {
+      console.log(error);
+      _this.errored = true;
+    })["finally"](function () {
+      return _this.loading = false;
+    });
+  },
+  methods: {
+    toggle: function toggle() {
+      this.isActive = !this.isActive;
+    },
+    clear: function clear(field) {
+      delete this.errors[field];
+    },
+    // finish() {
+    //     axios.post('/api/schools', this.fields).then(response => {
+    //         this.fields = {
+    //             university_name:null
+    //         };
+    //         this.isActive = !this.isActive
+    //         this.success = true;
+    //         this.errors = {};
+    //     }).catch(error => {
+    //         if (error.response.status === 422) {
+    //             this.errors = error.response.data.errors;
+    //         }
+    //         console.log('Error');
+    //     });
+    // },
+    submit: function submit() {
+      var _this2 = this;
 
-/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormTwo.vue?vue&type=script&lang=js&":
-/*!******************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormTwo.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+      axios.post('/api/schools', this.fields).then(function (response) {
+        _this2.fields = {
+          dateOfbirth: '',
+          firstname: '',
+          lastname: '',
+          middlename: '',
+          yearOfAdmission: ''
+        };
+        console.log(_this2.fields), _this2.success = true;
+        _this2.errors = {};
+      })["catch"](function (error) {
+        if (error.response.status === 422) {
+          _this2.errors = error.response.data.errors;
+        }
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-/* harmony default export */ __webpack_exports__["default"] = ({
-  name: "FormTwo",
-  props: {
-    universityDetails: Object
+        console.log('Error');
+      });
+    }
   }
 });
 
@@ -21369,15 +21341,62 @@ var render = function() {
       [
         _vm._m(0),
         _vm._v(" "),
-        _vm.schoolProps.errored
-          ? _c("section", [
-              _c("p", [
+        _c(
+          "section",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: !_vm.errors,
+                expression: "!errors"
+              }
+            ],
+            staticClass: "py-8 mx-auto text-center"
+          },
+          [
+            _c(
+              "p",
+              {
+                staticClass: "text-red-500 px-10 mx-auto py-5 w-1/2  bg-red-200"
+              },
+              [
                 _vm._v(
-                  "We're sorry, we're not able to retrieve this information at the moment, please try back later"
+                  "We're sorry, we're not able to retrieve this information at the moment, please try again"
                 )
-              ])
-            ])
-          : _vm._e(),
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "section",
+          {
+            directives: [
+              {
+                name: "show",
+                rawName: "v-show",
+                value: _vm.success,
+                expression: "success"
+              }
+            ],
+            staticClass: "py-8 mx-auto text-center"
+          },
+          [
+            _c(
+              "p",
+              {
+                staticClass:
+                  "text-green-500 px-10 mx-auto py-5 w-1/2  bg-green-200"
+              },
+              [
+                _vm._v(
+                  "We're sorry, we're not able to retrieve this information at the moment, please try again"
+                )
+              ]
+            )
+          ]
+        ),
         _vm._v(" "),
         _c(
           "div",
@@ -21388,9 +21407,823 @@ var render = function() {
           [
             _vm._m(1),
             _vm._v(" "),
-            _c("FormFields", _vm._b({}, "FormFields", _vm.schoolProps, false))
-          ],
-          1
+            _c("div", { staticClass: "py-2 md:py-3 px-4" }, [
+              _c(
+                "form",
+                {
+                  staticClass: "text-left my-2",
+                  attrs: { method: "POST" },
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.submit($event)
+                    }
+                  }
+                },
+                [
+                  _c("div", { staticClass: "flex flex-col" }, [
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: !_vm.isActive,
+                            expression: "!isActive"
+                          }
+                        ]
+                      },
+                      [
+                        _c("div", [
+                          _c("div", { staticClass: "py-6" }, [
+                            _vm._m(2),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "inline-block relative w-full" },
+                              [
+                                _c(
+                                  "select",
+                                  {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.fields.university_name,
+                                        expression: "fields.university_name"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      id: "university_name",
+                                      name: "university_name",
+                                      placeholder: "School Name"
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        var $$selectedVal = Array.prototype.filter
+                                          .call($event.target.options, function(
+                                            o
+                                          ) {
+                                            return o.selected
+                                          })
+                                          .map(function(o) {
+                                            var val =
+                                              "_value" in o ? o._value : o.value
+                                            return val
+                                          })
+                                        _vm.$set(
+                                          _vm.fields,
+                                          "university_name",
+                                          $event.target.multiple
+                                            ? $$selectedVal
+                                            : $$selectedVal[0]
+                                        )
+                                      }
+                                    }
+                                  },
+                                  _vm._l(
+                                    _vm.universityDetails.universities,
+                                    function(university) {
+                                      return _c(
+                                        "option",
+                                        _vm._b(
+                                          {
+                                            domProps: { value: university.id }
+                                          },
+                                          "option",
+                                          _vm.fields.university_name,
+                                          false
+                                        ),
+                                        [_vm._v(_vm._s(university.name))]
+                                      )
+                                    }
+                                  ),
+                                  0
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                                  },
+                                  [
+                                    _c(
+                                      "svg",
+                                      {
+                                        staticClass: "fill-current h-4 w-4",
+                                        attrs: {
+                                          xmlns: "http://www.w3.org/2000/svg",
+                                          viewBox: "0 0 20 20"
+                                        }
+                                      },
+                                      [
+                                        _c("path", {
+                                          attrs: {
+                                            d:
+                                              "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                          }
+                                        })
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm.errors && _vm.errors.university_name
+                              ? _c(
+                                  "div",
+                                  { staticClass: "text-red-400 text-xs" },
+                                  [
+                                    _vm._v(
+                                      _vm._s(_vm.errors.university_name[0])
+                                    )
+                                  ]
+                                )
+                              : _vm._e()
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "py-6" }, [
+                            _c(
+                              "div",
+                              { staticClass: "inline-block relative w-full" },
+                              [
+                                _vm._m(3),
+                                _vm._v(" "),
+                                _c("date-picker", {
+                                  staticClass: "w-20",
+                                  attrs: {
+                                    id: "yearOfgraduation",
+                                    name: "yearOfgraduation",
+                                    "value-type": "format",
+                                    format: "YYYY",
+                                    type: "year",
+                                    placeholder: "Select the year of graduation"
+                                  },
+                                  model: {
+                                    value: _vm.fields.yearOfgraduation,
+                                    callback: function($$v) {
+                                      _vm.$set(
+                                        _vm.fields,
+                                        "yearOfgraduation",
+                                        $$v
+                                      )
+                                    },
+                                    expression: "fields.yearOfgraduation"
+                                  }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _vm.errors && _vm.errors.yearOfgraduation
+                              ? _c(
+                                  "div",
+                                  { staticClass: "text-red-400 text-xs" },
+                                  [
+                                    _vm._v(
+                                      _vm._s(_vm.errors.yearOfgraduation[0])
+                                    )
+                                  ]
+                                )
+                              : _vm._e()
+                          ])
+                        ]),
+                        _vm._v(
+                          "\n                                div\n                                "
+                        ),
+                        _c("div", { staticClass: "py-6" }, [
+                          _vm._m(4),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "inline-block relative w-full" },
+                            [
+                              _c(
+                                "select",
+                                {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.fields.faculty,
+                                      expression: "fields.faculty"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline",
+                                  attrs: { id: "faculty", name: "faculty" },
+                                  on: {
+                                    change: function($event) {
+                                      var $$selectedVal = Array.prototype.filter
+                                        .call($event.target.options, function(
+                                          o
+                                        ) {
+                                          return o.selected
+                                        })
+                                        .map(function(o) {
+                                          var val =
+                                            "_value" in o ? o._value : o.value
+                                          return val
+                                        })
+                                      _vm.$set(
+                                        _vm.fields,
+                                        "faculty",
+                                        $event.target.multiple
+                                          ? $$selectedVal
+                                          : $$selectedVal[0]
+                                      )
+                                    }
+                                  }
+                                },
+                                _vm._l(
+                                  _vm.universityDetails.faculties,
+                                  function(faculty) {
+                                    return _c(
+                                      "option",
+                                      {
+                                        domProps: {
+                                          value: faculty.id,
+                                          value: _vm.fields.faculty
+                                        }
+                                      },
+                                      [_vm._v(_vm._s(faculty.name))]
+                                    )
+                                  }
+                                ),
+                                0
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass: "fill-current h-4 w-4",
+                                      attrs: {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        viewBox: "0 0 20 20"
+                                      }
+                                    },
+                                    [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _vm.errors && _vm.errors.faculty
+                            ? _c(
+                                "div",
+                                { staticClass: "text-red-400 text-xs" },
+                                [_vm._v(_vm._s(_vm.errors.faculty[0]))]
+                              )
+                            : _vm._e()
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "py-6" }, [
+                          _vm._m(5),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "inline-block relative w-full" },
+                            [
+                              _c(
+                                "select",
+                                {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.fields.department,
+                                      expression: "fields.department"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline",
+                                  attrs: {
+                                    id: "department",
+                                    name: "department"
+                                  },
+                                  on: {
+                                    change: function($event) {
+                                      var $$selectedVal = Array.prototype.filter
+                                        .call($event.target.options, function(
+                                          o
+                                        ) {
+                                          return o.selected
+                                        })
+                                        .map(function(o) {
+                                          var val =
+                                            "_value" in o ? o._value : o.value
+                                          return val
+                                        })
+                                      _vm.$set(
+                                        _vm.fields,
+                                        "department",
+                                        $event.target.multiple
+                                          ? $$selectedVal
+                                          : $$selectedVal[0]
+                                      )
+                                    }
+                                  }
+                                },
+                                _vm._l(
+                                  _vm.universityDetails.department,
+                                  function(department) {
+                                    return _c(
+                                      "option",
+                                      {
+                                        domProps: {
+                                          value: department.id,
+                                          value: _vm.fields.department
+                                        }
+                                      },
+                                      [_vm._v(_vm._s(department.name))]
+                                    )
+                                  }
+                                ),
+                                0
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass: "fill-current h-4 w-4",
+                                      attrs: {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        viewBox: "0 0 20 20"
+                                      }
+                                    },
+                                    [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _vm.errors && _vm.errors.department
+                            ? _c(
+                                "div",
+                                { staticClass: "text-red-400 text-xs" },
+                                [_vm._v(_vm._s(_vm.errors.department[0]))]
+                              )
+                            : _vm._e()
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "py-6" }, [
+                          _vm._m(6),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "inline-block relative w-full" },
+                            [
+                              _c(
+                                "select",
+                                {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.fields.degree,
+                                      expression: "fields.degree"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline",
+                                  attrs: { id: "degree", name: "degree" },
+                                  on: {
+                                    change: function($event) {
+                                      var $$selectedVal = Array.prototype.filter
+                                        .call($event.target.options, function(
+                                          o
+                                        ) {
+                                          return o.selected
+                                        })
+                                        .map(function(o) {
+                                          var val =
+                                            "_value" in o ? o._value : o.value
+                                          return val
+                                        })
+                                      _vm.$set(
+                                        _vm.fields,
+                                        "degree",
+                                        $event.target.multiple
+                                          ? $$selectedVal
+                                          : $$selectedVal[0]
+                                      )
+                                    }
+                                  }
+                                },
+                                _vm._l(_vm.universityDetails.degree, function(
+                                  degree
+                                ) {
+                                  return _c(
+                                    "option",
+                                    {
+                                      domProps: {
+                                        value: degree.id,
+                                        value: _vm.fields.degree
+                                      }
+                                    },
+                                    [_vm._v(_vm._s(degree.name))]
+                                  )
+                                }),
+                                0
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass: "fill-current h-4 w-4",
+                                      attrs: {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        viewBox: "0 0 20 20"
+                                      }
+                                    },
+                                    [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _vm.errors && _vm.errors.degree
+                            ? _c(
+                                "div",
+                                { staticClass: "text-red-400 text-xs" },
+                                [_vm._v(_vm._s(_vm.errors.degree[0]))]
+                              )
+                            : _vm._e()
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "bg-blue flex justify-center text-white mt-6 py-2 rounded ",
+                            attrs: { type: "button" },
+                            on: {
+                              click: function($event) {
+                                return _vm.toggle()
+                              }
+                            }
+                          },
+                          [
+                            _c(
+                              "h1",
+                              {
+                                staticClass:
+                                  "text-light-normal font-semibold text-center px-4"
+                              },
+                              [
+                                _vm._v(
+                                  "\n                                        Next\n                                    "
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.isActive,
+                            expression: "isActive"
+                          }
+                        ]
+                      },
+                      [
+                        _c("div", { staticClass: "py-6" }, [
+                          _vm._m(7),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "inline-block relative w-full" },
+                            [
+                              _c(
+                                "select",
+                                {
+                                  directives: [
+                                    {
+                                      name: "model",
+                                      rawName: "v-model",
+                                      value: _vm.fields.class,
+                                      expression: "fields.class"
+                                    }
+                                  ],
+                                  staticClass:
+                                    "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline",
+                                  attrs: { id: "classes", name: "classes" },
+                                  on: {
+                                    change: function($event) {
+                                      var $$selectedVal = Array.prototype.filter
+                                        .call($event.target.options, function(
+                                          o
+                                        ) {
+                                          return o.selected
+                                        })
+                                        .map(function(o) {
+                                          var val =
+                                            "_value" in o ? o._value : o.value
+                                          return val
+                                        })
+                                      _vm.$set(
+                                        _vm.fields,
+                                        "class",
+                                        $event.target.multiple
+                                          ? $$selectedVal
+                                          : $$selectedVal[0]
+                                      )
+                                    }
+                                  }
+                                },
+                                _vm._l(_vm.universityDetails.classes, function(
+                                  classes
+                                ) {
+                                  return _c(
+                                    "option",
+                                    {
+                                      domProps: {
+                                        value: classes.id,
+                                        value: _vm.fields.class
+                                      }
+                                    },
+                                    [_vm._v(_vm._s(classes.type))]
+                                  )
+                                }),
+                                0
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass: "fill-current h-4 w-4",
+                                      attrs: {
+                                        xmlns: "http://www.w3.org/2000/svg",
+                                        viewBox: "0 0 20 20"
+                                      }
+                                    },
+                                    [
+                                      _c("path", {
+                                        attrs: {
+                                          d:
+                                            "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _vm.errors && _vm.errors.university_name
+                            ? _c(
+                                "div",
+                                { staticClass: "text-red-400 text-xs" },
+                                [_vm._v(_vm._s(_vm.errors.university_name[0]))]
+                              )
+                            : _vm._e()
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c(
+                            "div",
+                            { staticClass: "flex flex-row py-6 space-x-5" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "inline-block relative w-full" },
+                                [
+                                  _vm._m(8),
+                                  _vm._v(" "),
+                                  _c("date-picker", {
+                                    staticClass: "w-20",
+                                    attrs: {
+                                      id: "dateOfbirth",
+                                      name: "dateOfbirth",
+                                      "value-type": "format",
+                                      format: "YYYY-MM-DD",
+                                      type: "date",
+                                      placeholder: "Select date"
+                                    },
+                                    model: {
+                                      value: _vm.fields.dateOfbirth,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.fields, "dateOfbirth", $$v)
+                                      },
+                                      expression: "fields.dateOfbirth"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.errors && _vm.errors.dateOfbirth
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-400 text-xs" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(_vm.errors.dateOfbirth[0])
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "inline-block relative w-full" },
+                                [
+                                  _vm._m(9),
+                                  _vm._v(" "),
+                                  _c("date-picker", {
+                                    staticClass: "w-20",
+                                    attrs: {
+                                      id: "yearOfAdmission",
+                                      name: "yearOfAdmission",
+                                      "value-type": "format",
+                                      format: "YYYY",
+                                      type: "year",
+                                      placeholder:
+                                        "Select a year of graduation date"
+                                    },
+                                    model: {
+                                      value: _vm.fields.yearOfAdmission,
+                                      callback: function($$v) {
+                                        _vm.$set(
+                                          _vm.fields,
+                                          "yearOfAdmission",
+                                          $$v
+                                        )
+                                      },
+                                      expression: "fields.yearOfAdmission"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.errors && _vm.errors.yearOfAdmission
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-400 text-xs" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(
+                                              _vm.errors.yearOfAdmission[0]
+                                            )
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ],
+                                1
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "flex flex-row py-6 space-x-2" },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "inline-block relative w-full" },
+                                [
+                                  _vm._m(10),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    staticClass:
+                                      "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.errors && _vm.errors.lastname
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-400 text-xs" },
+                                        [_vm._v(_vm._s(_vm.errors.lastname[0]))]
+                                      )
+                                    : _vm._e()
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "inline-block relative w-full" },
+                                [
+                                  _vm._m(11),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    staticClass:
+                                      "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.errors && _vm.errors.firstname
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-400 text-xs" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(_vm.errors.firstname[0])
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "inline-block relative w-full" },
+                                [
+                                  _vm._m(12),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    staticClass:
+                                      "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.errors && _vm.errors.middlename
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-400 text-xs" },
+                                        [
+                                          _vm._v(
+                                            _vm._s(_vm.errors.middlename[0])
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ]
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(13)
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ])
+          ]
         )
       ]
     )
@@ -21403,7 +22236,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "text-center  sm:pb-20" }, [
       _c("h1", { staticClass: "text-green-300 font-bold text-5xl" }, [
-        _vm._v("Nigerian Students' Qualification Check System")
+        _vm._v("Nigerian Students' Qualification Check")
       ])
     ])
   },
@@ -21422,197 +22255,7 @@ var staticRenderFns = [
         ])
       ]
     )
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormFields.vue?vue&type=template&id=618aeac8&scoped=true&":
-/*!*************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormFields.vue?vue&type=template&id=618aeac8&scoped=true& ***!
-  \*************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "py-2 md:py-3 px-4" }, [
-    _c("form", { staticClass: "text-left my-2", attrs: { action: "" } }, [
-      _c(
-        "div",
-        { staticClass: "flex flex-col" },
-        [
-          _c("FormOne", _vm._b({}, "FormOne", _vm.schoolProps, false)),
-          _vm._v(" "),
-          _c("FormTwo", _vm._b({}, "FormTwo", _vm.schoolProps, false)),
-          _vm._v(" "),
-          _c("FormThree", _vm._b({}, "FormThree", _vm.schoolProps, false)),
-          _vm._v(" "),
-          _vm._m(0)
-        ],
-        1
-      )
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      {
-        staticClass: "bg-blue flex justify-center text-white mt-6 py-2 rounded "
-      },
-      [
-        _c(
-          "h1",
-          { staticClass: "text-light-normal font-semibold text-center" },
-          [_vm._v("\n                    Sign Up\n                ")]
-        )
-      ]
-    )
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormOne.vue?vue&type=template&id=6c469b67&scoped=true&":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormOne.vue?vue&type=template&id=6c469b67&scoped=true& ***!
-  \**********************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "py-6" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "inline-block relative w-full" }, [
-        _c(
-          "select",
-          {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.fields.university_name,
-                expression: "fields.university_name"
-              }
-            ],
-            staticClass:
-              "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline",
-            attrs: { id: "university_name", name: "university_name" },
-            on: {
-              change: function($event) {
-                var $$selectedVal = Array.prototype.filter
-                  .call($event.target.options, function(o) {
-                    return o.selected
-                  })
-                  .map(function(o) {
-                    var val = "_value" in o ? o._value : o.value
-                    return val
-                  })
-                _vm.$set(
-                  _vm.fields,
-                  "university_name",
-                  $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                )
-              }
-            }
-          },
-          [
-            _c("option", [_vm._v("Select a School")]),
-            _vm._v(" "),
-            _vm._l(_vm.universityDetails.universities, function(university) {
-              return _c("option", { domProps: { value: university.id } }, [
-                _vm._v(_vm._s(university.name))
-              ])
-            })
-          ],
-          2
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-          },
-          [
-            _c(
-              "svg",
-              {
-                staticClass: "fill-current h-4 w-4",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 20 20"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  }
-                })
-              ]
-            )
-          ]
-        )
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "flex flex-row py-6" }, [
-      _c(
-        "div",
-        { staticClass: "inline-block relative w-full" },
-        [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("date-picker", {
-            staticClass: "w-20",
-            attrs: {
-              format: "YYYY",
-              type: "year",
-              placeholder: "Select the year of graduation"
-            },
-            model: {
-              value: _vm.fields.graduationYear,
-              callback: function($$v) {
-                _vm.$set(_vm.fields, "graduationYear", $$v)
-              },
-              expression: "fields.graduationYear"
-            }
-          })
-        ],
-        1
-      )
-    ])
-  ])
-}
-var staticRenderFns = [
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -21632,361 +22275,7 @@ var staticRenderFns = [
         _vm._v("Year of Graduation ")
       ])
     ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormThree.vue?vue&type=template&id=10ceff42&scoped=true&":
-/*!************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormThree.vue?vue&type=template&id=10ceff42&scoped=true& ***!
-  \************************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "flex flex-row py-6 space-x-5" }, [
-      _c(
-        "div",
-        { staticClass: "inline-block relative w-full" },
-        [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("date-picker", {
-            staticClass: "w-20",
-            attrs: {
-              format: "YYYY-MM-DD",
-              type: "date",
-              placeholder: "Select date"
-            },
-            model: {
-              value: _vm.date,
-              callback: function($$v) {
-                _vm.date = $$v
-              },
-              expression: "date"
-            }
-          })
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "inline-block relative w-full" },
-        [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("date-picker", {
-            staticClass: "w-20",
-            attrs: {
-              format: "YYYY",
-              type: "year",
-              placeholder: "Select a year of graduation date"
-            },
-            model: {
-              value: _vm.yearOfAdmission,
-              callback: function($$v) {
-                _vm.yearOfAdmission = $$v
-              },
-              expression: "yearOfAdmission"
-            }
-          })
-        ],
-        1
-      )
-    ]),
-    _vm._v(" "),
-    _vm._m(2)
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "block", attrs: { for: "" } }, [
-      _c("span", { staticClass: "text-gray-hard" }, [_vm._v("Date of Birth ")])
-    ])
   },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("label", { staticClass: "block", attrs: { for: "" } }, [
-      _c("span", { staticClass: "text-gray-hard" }, [
-        _vm._v("Year of Admission ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "py-6" }, [
-      _c("label", { staticClass: "block", attrs: { for: "" } }, [
-        _c("span", { staticClass: "text-gray-hard" }, [
-          _vm._v("Enter Students' Name ")
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "inline-block relative w-full" }, [
-        _c("input", {
-          staticClass:
-            "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-        }),
-        _vm._v(" "),
-        _c("p", { staticClass: "text-gray-600 text-xs italic" }, [
-          _vm._v("LastName/FirstName/MiddleName")
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormTwo.vue?vue&type=template&id=f6a36766&scoped=true&":
-/*!**********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/FormTwo.vue?vue&type=template&id=f6a36766&scoped=true& ***!
-  \**********************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "py-6" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "inline-block relative w-full" }, [
-        _c(
-          "select",
-          {
-            staticClass:
-              "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-          },
-          [
-            _c("option", [_vm._v("Select a Faculty/College")]),
-            _vm._v(" "),
-            _vm._l(_vm.universityDetails.faculties, function(university) {
-              return _c("option", { domProps: { value: university.id } }, [
-                _vm._v(_vm._s(university.name))
-              ])
-            })
-          ],
-          2
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-          },
-          [
-            _c(
-              "svg",
-              {
-                staticClass: "fill-current h-4 w-4",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 20 20"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  }
-                })
-              ]
-            )
-          ]
-        )
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "py-6" }, [
-      _vm._m(1),
-      _vm._v(" "),
-      _c("div", { staticClass: "inline-block relative w-full" }, [
-        _c(
-          "select",
-          {
-            staticClass:
-              "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-          },
-          [
-            _c("option", [_vm._v("Select a Department")]),
-            _vm._v(" "),
-            _vm._l(_vm.universityDetails.department, function(university) {
-              return _c("option", { domProps: { value: university.id } }, [
-                _vm._v(_vm._s(university.name))
-              ])
-            })
-          ],
-          2
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-          },
-          [
-            _c(
-              "svg",
-              {
-                staticClass: "fill-current h-4 w-4",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 20 20"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  }
-                })
-              ]
-            )
-          ]
-        )
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "py-6" }, [
-      _vm._m(2),
-      _vm._v(" "),
-      _c("div", { staticClass: "inline-block relative w-full" }, [
-        _c(
-          "select",
-          {
-            staticClass:
-              "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-          },
-          [
-            _c("option", [_vm._v("Select a Degree")]),
-            _vm._v(" "),
-            _vm._l(_vm.universityDetails.degree, function(university) {
-              return _c("option", { domProps: { value: university.id } }, [
-                _vm._v(_vm._s(university.name) + " "),
-                _c("span", [_vm._v(_vm._s(university.abbr))])
-              ])
-            })
-          ],
-          2
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-          },
-          [
-            _c(
-              "svg",
-              {
-                staticClass: "fill-current h-4 w-4",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 20 20"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  }
-                })
-              ]
-            )
-          ]
-        )
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "py-6" }, [
-      _vm._m(3),
-      _vm._v(" "),
-      _c("div", { staticClass: "inline-block relative w-full" }, [
-        _c(
-          "select",
-          {
-            staticClass:
-              "block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-          },
-          [
-            _c("option", [_vm._v("Select a Class")]),
-            _vm._v(" "),
-            _vm._l(_vm.universityDetails.classes, function(university) {
-              return _c("option", { domProps: { value: university.id } }, [
-                _vm._v(_vm._s(university.type))
-              ])
-            })
-          ],
-          2
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
-          },
-          [
-            _c(
-              "svg",
-              {
-                staticClass: "fill-current h-4 w-4",
-                attrs: {
-                  xmlns: "http://www.w3.org/2000/svg",
-                  viewBox: "0 0 20 20"
-                }
-              },
-              [
-                _c("path", {
-                  attrs: {
-                    d:
-                      "M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-                  }
-                })
-              ]
-            )
-          ]
-        )
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -22023,6 +22312,102 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("label", { staticClass: "block", attrs: { for: "" } }, [
       _c("span", { staticClass: "text-gray-hard" }, [_vm._v("Select a Class ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "block", attrs: { for: "" } }, [
+      _c("span", { staticClass: "text-gray-hard" }, [_vm._v("Date of Birth ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "block", attrs: { for: "" } }, [
+      _c("span", { staticClass: "text-gray-hard" }, [
+        _vm._v("Year of Admission ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "block", attrs: { for: "" } }, [
+      _c("span", { staticClass: "text-gray-hard" }, [_vm._v("Lastname ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "block", attrs: { for: "" } }, [
+      _c("span", { staticClass: "text-gray-hard" }, [_vm._v("Firstname ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "block", attrs: { for: "" } }, [
+      _c("span", { staticClass: "text-gray-hard" }, [_vm._v("Middlename ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "flex flex-row items-center space-x-5" }, [
+      _c("div", {}, [
+        _c(
+          "button",
+          {
+            staticClass:
+              "bg-blue flex justify-center text-white w-full py-2 rounded ",
+            attrs: { type: "submit" }
+          },
+          [
+            _c(
+              "h1",
+              {
+                staticClass: "text-light-normal font-semibold text-center px-4"
+              },
+              [
+                _vm._v(
+                  "\n                                                Submit\n                                            "
+                )
+              ]
+            )
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "button",
+          {
+            staticClass:
+              "bg-blue flex justify-center text-white w-full py-2 rounded ",
+            attrs: { type: "submit" }
+          },
+          [
+            _c(
+              "h1",
+              {
+                staticClass: "text-light-normal font-semibold text-center px-4"
+              },
+              [
+                _vm._v(
+                  "\n                                                Finish\n                                            "
+                )
+              ]
+            )
+          ]
+        )
+      ])
     ])
   }
 ]
@@ -38601,303 +38986,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Form_vue_vue_type_template_id_8048fca2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
-
-/***/ }),
-
-/***/ "./resources/js/components/FormFields.vue":
-/*!************************************************!*\
-  !*** ./resources/js/components/FormFields.vue ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormFields_vue_vue_type_template_id_618aeac8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormFields.vue?vue&type=template&id=618aeac8&scoped=true& */ "./resources/js/components/FormFields.vue?vue&type=template&id=618aeac8&scoped=true&");
-/* harmony import */ var _FormFields_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormFields.vue?vue&type=script&lang=js& */ "./resources/js/components/FormFields.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormFields_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormFields_vue_vue_type_template_id_618aeac8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormFields_vue_vue_type_template_id_618aeac8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "618aeac8",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/FormFields.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/FormFields.vue?vue&type=script&lang=js&":
-/*!*************************************************************************!*\
-  !*** ./resources/js/components/FormFields.vue?vue&type=script&lang=js& ***!
-  \*************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormFields_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FormFields.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormFields.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormFields_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/FormFields.vue?vue&type=template&id=618aeac8&scoped=true&":
-/*!*******************************************************************************************!*\
-  !*** ./resources/js/components/FormFields.vue?vue&type=template&id=618aeac8&scoped=true& ***!
-  \*******************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormFields_vue_vue_type_template_id_618aeac8_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./FormFields.vue?vue&type=template&id=618aeac8&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormFields.vue?vue&type=template&id=618aeac8&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormFields_vue_vue_type_template_id_618aeac8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormFields_vue_vue_type_template_id_618aeac8_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/FormOne.vue":
-/*!*********************************************!*\
-  !*** ./resources/js/components/FormOne.vue ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormOne_vue_vue_type_template_id_6c469b67_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormOne.vue?vue&type=template&id=6c469b67&scoped=true& */ "./resources/js/components/FormOne.vue?vue&type=template&id=6c469b67&scoped=true&");
-/* harmony import */ var _FormOne_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormOne.vue?vue&type=script&lang=js& */ "./resources/js/components/FormOne.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormOne_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormOne_vue_vue_type_template_id_6c469b67_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormOne_vue_vue_type_template_id_6c469b67_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "6c469b67",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/FormOne.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/FormOne.vue?vue&type=script&lang=js&":
-/*!**********************************************************************!*\
-  !*** ./resources/js/components/FormOne.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormOne_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FormOne.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormOne.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormOne_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/FormOne.vue?vue&type=template&id=6c469b67&scoped=true&":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/components/FormOne.vue?vue&type=template&id=6c469b67&scoped=true& ***!
-  \****************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormOne_vue_vue_type_template_id_6c469b67_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./FormOne.vue?vue&type=template&id=6c469b67&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormOne.vue?vue&type=template&id=6c469b67&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormOne_vue_vue_type_template_id_6c469b67_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormOne_vue_vue_type_template_id_6c469b67_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/FormThree.vue":
-/*!***********************************************!*\
-  !*** ./resources/js/components/FormThree.vue ***!
-  \***********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormThree_vue_vue_type_template_id_10ceff42_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormThree.vue?vue&type=template&id=10ceff42&scoped=true& */ "./resources/js/components/FormThree.vue?vue&type=template&id=10ceff42&scoped=true&");
-/* harmony import */ var _FormThree_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormThree.vue?vue&type=script&lang=js& */ "./resources/js/components/FormThree.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormThree_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormThree_vue_vue_type_template_id_10ceff42_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormThree_vue_vue_type_template_id_10ceff42_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "10ceff42",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/FormThree.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/FormThree.vue?vue&type=script&lang=js&":
-/*!************************************************************************!*\
-  !*** ./resources/js/components/FormThree.vue?vue&type=script&lang=js& ***!
-  \************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormThree_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FormThree.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormThree.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormThree_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/FormThree.vue?vue&type=template&id=10ceff42&scoped=true&":
-/*!******************************************************************************************!*\
-  !*** ./resources/js/components/FormThree.vue?vue&type=template&id=10ceff42&scoped=true& ***!
-  \******************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormThree_vue_vue_type_template_id_10ceff42_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./FormThree.vue?vue&type=template&id=10ceff42&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormThree.vue?vue&type=template&id=10ceff42&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormThree_vue_vue_type_template_id_10ceff42_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormThree_vue_vue_type_template_id_10ceff42_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/FormTwo.vue":
-/*!*********************************************!*\
-  !*** ./resources/js/components/FormTwo.vue ***!
-  \*********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _FormTwo_vue_vue_type_template_id_f6a36766_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FormTwo.vue?vue&type=template&id=f6a36766&scoped=true& */ "./resources/js/components/FormTwo.vue?vue&type=template&id=f6a36766&scoped=true&");
-/* harmony import */ var _FormTwo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./FormTwo.vue?vue&type=script&lang=js& */ "./resources/js/components/FormTwo.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-
-
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
-  _FormTwo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _FormTwo_vue_vue_type_template_id_f6a36766_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _FormTwo_vue_vue_type_template_id_f6a36766_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  "f6a36766",
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/FormTwo.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/FormTwo.vue?vue&type=script&lang=js&":
-/*!**********************************************************************!*\
-  !*** ./resources/js/components/FormTwo.vue?vue&type=script&lang=js& ***!
-  \**********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTwo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./FormTwo.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormTwo.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTwo_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
-
-/***/ }),
-
-/***/ "./resources/js/components/FormTwo.vue?vue&type=template&id=f6a36766&scoped=true&":
-/*!****************************************************************************************!*\
-  !*** ./resources/js/components/FormTwo.vue?vue&type=template&id=f6a36766&scoped=true& ***!
-  \****************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTwo_vue_vue_type_template_id_f6a36766_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./FormTwo.vue?vue&type=template&id=f6a36766&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/FormTwo.vue?vue&type=template&id=f6a36766&scoped=true&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTwo_vue_vue_type_template_id_f6a36766_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FormTwo_vue_vue_type_template_id_f6a36766_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
-
-/***/ }),
-
-/***/ "./resources/js/components/props.js":
-/*!******************************************!*\
-  !*** ./resources/js/components/props.js ***!
-  \******************************************/
-/*! exports provided: schoolProps */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "schoolProps", function() { return schoolProps; });
-var schoolProps = {
-  universityDetails: {},
-  fields: {},
-  loading: true,
-  errored: false,
-  enableSort: false,
-  sorting: -5
-};
 
 /***/ }),
 

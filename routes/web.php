@@ -15,6 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/',  'FormsController@home');
-Route::get('/form',  'FormController@form');
-//Route::get('/schools',  'FormController@index');
+Route::get('/',  'Api\\FormController@home');
