@@ -1911,6 +1911,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue2_datepicker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue2-datepicker */ "./node_modules/vue2-datepicker/index.esm.js");
 /* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue2-datepicker/index.css */ "./node_modules/vue2-datepicker/index.css");
 /* harmony import */ var vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue2_datepicker_index_css__WEBPACK_IMPORTED_MODULE_1__);
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2081,24 +2087,24 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       fields: {
-        degree: 'Select a Degree',
-        department: 'Select a Department',
-        faculty: 'Select a Faculty',
-        "class": 'Select a Class',
-        dateOfbirth: 'Select a Date of Birth',
-        firstname: 'Enter Student Firstname',
-        lastname: 'Enter Student Lastname',
-        middlename: 'Enter Student Middlename',
-        yearOfAdmission: 'Select a year of Admission',
-        university_name: 'Select a University Name',
-        yearOfgraduation: 'Select a year of Graduation'
+        degree: '',
+        department: '',
+        faculty: '',
+        "class": '',
+        dateOfbirth: '',
+        firstname: '',
+        lastname: '',
+        middlename: '',
+        yearOfAdmission: '',
+        university_name: '',
+        yearOfgraduation: ''
       },
       universityDetails: {},
       date: 2020,
       loading: true,
       success: false,
-      errors: {},
-      isActive: false,
+      errors: false,
+      isActive: true,
       enableSort: false,
       sorting: -5
     };
@@ -2112,44 +2118,49 @@ __webpack_require__.r(__webpack_exports__);
       console.log(_this.universityDetails);
     })["catch"](function (error) {
       console.log(error);
-      _this.errored = true;
+      _this.errors = {};
     })["finally"](function () {
       return _this.loading = false;
     });
+    if (localStorage.fields) this.fields = localStorage.fields;
+  },
+  watch: {
+    name: function name(fields) {
+      localStorage.name = fields;
+    }
   },
   methods: {
+    // openStorage () {
+    //     return JSON.parse(localStorage.getItem('fields'))
+    // },
+    // saveStorage (fields) {
+    //     localStorage.setItem('fields', JSON.stringify(fields))
+    // },
+    // updateForm (input, value) {
+    //     this.fields[input] = value
+    //     let storedForm = this.openStorage() // extract stored form
+    //     if (!storedForm) storedForm = {} // if none exists, default to empty object
+    //
+    //     storedForm[input] = value // store new value
+    //     this.saveStorage(storedForm) // save changes into localStorage
+    // },
     toggle: function toggle() {
       this.isActive = !this.isActive;
     },
     clear: function clear(field) {
       delete this.errors[field];
     },
-    // finish() {
-    //     axios.post('/api/schools', this.fields).then(response => {
-    //         this.fields = {
-    //             university_name:null
-    //         };
-    //         this.isActive = !this.isActive
-    //         this.success = true;
-    //         this.errors = {};
-    //     }).catch(error => {
-    //         if (error.response.status === 422) {
-    //             this.errors = error.response.data.errors;
-    //         }
-    //         console.log('Error');
-    //     });
-    // },
+    created: function created() {
+      var storedForm = this.openStorage();
+
+      if (storedForm) {
+        this.fields = _objectSpread(_objectSpread({}, this.fields), storedForm);
+      }
+    },
     submit: function submit() {
       var _this2 = this;
 
       axios.post('/api/schools', this.fields).then(function (response) {
-        _this2.fields = {
-          dateOfbirth: '',
-          firstname: '',
-          lastname: '',
-          middlename: '',
-          yearOfAdmission: ''
-        };
         console.log(_this2.fields), _this2.success = true;
         _this2.errors = {};
       })["catch"](function (error) {
@@ -21341,62 +21352,31 @@ var render = function() {
       [
         _vm._m(0),
         _vm._v(" "),
-        _c(
-          "section",
-          {
-            directives: [
-              {
-                name: "show",
-                rawName: "v-show",
-                value: !_vm.errors,
-                expression: "!errors"
-              }
-            ],
-            staticClass: "py-8 mx-auto text-center"
-          },
-          [
-            _c(
-              "p",
-              {
-                staticClass: "text-red-500 px-10 mx-auto py-5 w-1/2  bg-red-200"
-              },
-              [
-                _vm._v(
-                  "We're sorry, we're not able to retrieve this information at the moment, please try again"
-                )
-              ]
-            )
-          ]
-        ),
+        _vm.errors
+          ? _c("section", { staticClass: "py-8 w-full sm:w-1/2" }, [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "text-red-500 mx-auto px-3 text-sm sm:px-8 py-3 text-center  w-1/2  bg-red-200"
+                },
+                [_vm._v("Form Submission Failed")]
+              )
+            ])
+          : _vm._e(),
         _vm._v(" "),
-        _c(
-          "section",
-          {
-            directives: [
-              {
-                name: "show",
-                rawName: "v-show",
-                value: _vm.success,
-                expression: "success"
-              }
-            ],
-            staticClass: "py-8 mx-auto text-center"
-          },
-          [
-            _c(
-              "p",
-              {
-                staticClass:
-                  "text-green-500 px-10 mx-auto py-5 w-1/2  bg-green-200"
-              },
-              [
-                _vm._v(
-                  "We're sorry, we're not able to retrieve this information at the moment, please try again"
-                )
-              ]
-            )
-          ]
-        ),
+        _vm.success
+          ? _c("section", { staticClass: "py-8 mx-auto text-center" }, [
+              _c(
+                "p",
+                {
+                  staticClass:
+                    "text-green-500 px-10 mx-auto py-5 w-1/2  bg-green-200"
+                },
+                [_vm._v("Form Submitted")]
+              )
+            ])
+          : _vm._e(),
         _vm._v(" "),
         _c(
           "div",
@@ -21429,8 +21409,8 @@ var render = function() {
                           {
                             name: "show",
                             rawName: "v-show",
-                            value: !_vm.isActive,
-                            expression: "!isActive"
+                            value: _vm.isActive,
+                            expression: "isActive"
                           }
                         ]
                       },
@@ -21489,14 +21469,7 @@ var render = function() {
                                     function(university) {
                                       return _c(
                                         "option",
-                                        _vm._b(
-                                          {
-                                            domProps: { value: university.id }
-                                          },
-                                          "option",
-                                          _vm.fields.university_name,
-                                          false
-                                        ),
+                                        { domProps: { value: university.id } },
                                         [_vm._v(_vm._s(university.name))]
                                       )
                                     }
@@ -21645,12 +21618,7 @@ var render = function() {
                                   function(faculty) {
                                     return _c(
                                       "option",
-                                      {
-                                        domProps: {
-                                          value: faculty.id,
-                                          value: _vm.fields.faculty
-                                        }
-                                      },
+                                      { domProps: { value: faculty.id } },
                                       [_vm._v(_vm._s(faculty.name))]
                                     )
                                   }

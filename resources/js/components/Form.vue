@@ -4,11 +4,11 @@
             <div class="text-center  sm:pb-20">
                 <h1 class="text-green-300 font-bold text-5xl">Nigerian Students' Qualification Check</h1>
             </div>
-            <section class="py-8 mx-auto text-center" v-show="!errors">
-                <p class="text-red-500 px-10 mx-auto py-5 w-1/2  bg-red-200">We're sorry, we're not able to retrieve this information at the moment, please try again</p>
+            <section class="py-8 w-full sm:w-1/2" v-if="errors">
+                <p class="text-red-500 mx-auto px-3 text-sm sm:px-8 py-3 text-center  w-1/2  bg-red-200">Form Submission Failed</p>
             </section>
-            <section class="py-8 mx-auto text-center" v-show="success">
-                <p class="text-green-500 px-10 mx-auto py-5 w-1/2  bg-green-200">We're sorry, we're not able to retrieve this information at the moment, please try again</p>
+            <section class="py-8 mx-auto text-center" v-if="success">
+                <p class="text-green-500 px-10 mx-auto py-5 w-1/2  bg-green-200">Form Submitted</p>
             </section>
 <!--            <section v-show="success">-->
 <!--                <p>We're sorry, we're not able to retrieve this information at the moment, please try back later</p>-->
@@ -22,14 +22,14 @@
                 <div class="py-2 md:py-3 px-4">
                     <form method="POST" class="text-left my-2" @submit.prevent="submit">
                         <div class="flex flex-col">
-                            <div v-show="!isActive">
+                            <div v-show="isActive">
                                 <div >
                                     <div class="py-6">
                                         <label for="" class="block"><span class="text-gray-hard">Select School Name </span></label>
                                         <div class="inline-block relative w-full" >
                                             <select  class="block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
                                                     id="university_name" name="university_name"  placeholder="School Name" v-model="fields.university_name">
-                                                <option  v-for="university in universityDetails.universities" :value="university.id" v-bind="fields.university_name">{{university.name}}</option>
+                                                <option  v-for="university in universityDetails.universities" :value="university.id">{{university.name}}</option>
                                             </select>
                                             <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -51,7 +51,7 @@
                                     <div class="inline-block relative w-full">
                                         <select class="block appearance-none w-full bg-white text-sm hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
                                                 id="faculty" name="faculty" v-model="fields.faculty">
-                                            <option v-for="faculty in universityDetails.faculties" :value="faculty.id" v-bind:value="fields.faculty">{{faculty.name}}</option>
+                                            <option v-for="faculty in universityDetails.faculties" :value="faculty.id">{{faculty.name}}</option>
                                         </select>
                                         <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
                                             <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
@@ -170,30 +170,31 @@
         data () {
             return {
                 fields:{
-                    degree: 'Select a Degree',
-                    department: 'Select a Department',
-                    faculty: 'Select a Faculty',
-                    class: 'Select a Class',
-                    dateOfbirth: 'Select a Date of Birth',
-                    firstname: 'Enter Student Firstname',
-                    lastname: 'Enter Student Lastname',
-                    middlename: 'Enter Student Middlename',
-                    yearOfAdmission: 'Select a year of Admission',
-                    university_name: 'Select a University Name',
-                    yearOfgraduation: 'Select a year of Graduation'
+                    degree: '',
+                    department: '',
+                    faculty: '',
+                    class: '',
+                    dateOfbirth: '',
+                    firstname: '',
+                    lastname: '',
+                    middlename: '',
+                    yearOfAdmission: '',
+                    university_name: '',
+                    yearOfgraduation: ''
                 },
                 universityDetails:{},
                 date:2020,
                 loading: true,
                 success: false,
-                errors : {},
-                isActive:false,
+                errors : false,
+                isActive:true,
                 enableSort: false,
                 sorting:-5,
             }
         },
         mounted() {
             this.enableSort = true
+
             axios
                 .get('/api/schools')
                 .then(response => {
@@ -202,41 +203,50 @@
                 })
                 .catch(error => {
                     console.log(error)
-                    this.errored = true
+                    this.errors = {};
                 })
                 .finally(() => this.loading = false)
+            if(localStorage.fields) this.fields = localStorage.fields;
+        },
+        watch:{
+            name(fields) {
+                localStorage.name = fields;
+            }
         },
         methods: {
+
+            // openStorage () {
+            //     return JSON.parse(localStorage.getItem('fields'))
+            // },
+            // saveStorage (fields) {
+            //     localStorage.setItem('fields', JSON.stringify(fields))
+            // },
+            // updateForm (input, value) {
+            //     this.fields[input] = value
+            //     let storedForm = this.openStorage() // extract stored form
+            //     if (!storedForm) storedForm = {} // if none exists, default to empty object
+            //
+            //     storedForm[input] = value // store new value
+            //     this.saveStorage(storedForm) // save changes into localStorage
+            // },
+
             toggle: function(){
                 this.isActive = !this.isActive
             },
             clear(field){
                 delete this.errors[field]
             },
-            // finish() {
-            //     axios.post('/api/schools', this.fields).then(response => {
-            //         this.fields = {
-            //             university_name:null
-            //         };
-            //         this.isActive = !this.isActive
-            //         this.success = true;
-            //         this.errors = {};
-            //     }).catch(error => {
-            //         if (error.response.status === 422) {
-            //             this.errors = error.response.data.errors;
-            //         }
-            //         console.log('Error');
-            //     });
-            // },
+            created () {
+                const storedForm = this.openStorage()
+                if (storedForm) {
+                    this.fields = {
+                        ...this.fields,
+                        ...storedForm
+                    }
+                }
+            },
             submit() {
                 axios.post('/api/schools', this.fields).then(response => {
-                    this.fields = {
-                        dateOfbirth: '',
-                        firstname: '',
-                        lastname: '',
-                        middlename: '',
-                        yearOfAdmission: '',
-                    };
                     console.log(this.fields),
                     this.success = true;
                     this.errors = {};
