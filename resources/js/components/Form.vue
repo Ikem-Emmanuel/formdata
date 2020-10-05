@@ -45,7 +45,6 @@
                                         <div class="text-red-400 text-xs" v-if="errors && errors.yearOfgraduation">{{errors.yearOfgraduation[0]}}</div>
                                     </div>
                                 </div>
-                                div
                                 <div class="py-6">
                                     <label for="" class="block"><span class="text-gray-hard">Select Faculty/College </span></label>
                                     <div class="inline-block relative w-full">
@@ -91,7 +90,7 @@
                                     </h1>
                                 </button>
                             </div>
-                            <div v-show="isActive">
+                            <div v-show="!isActive">
                                 <div class="py-6">
                                     <label for="" class="block"><span class="text-gray-hard">Select a Class </span></label>
                                     <div class="inline-block relative w-full">
@@ -189,7 +188,7 @@
                 errors : false,
                 isActive:true,
                 enableSort: false,
-                sorting:-5,
+                sorting:-10,
             }
         },
         mounted() {

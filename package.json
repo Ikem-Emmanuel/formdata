@@ -29,6 +29,7 @@
         "tailwindcss": "^1.8.10",
         "vue-router": "^3.4.3",
         "vue-simple-search-dropdown": "^1.0.1",
-        "vue2-datepicker": "^3.6.2"
+        "vue2-datepicker": "^3.6.2",
+        "vuex": "^3.5.1"
     }
 }

@@ -2079,7 +2079,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2106,7 +2105,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       errors: false,
       isActive: true,
       enableSort: false,
-      sorting: -5
+      sorting: -10
     };
   },
   mounted: function mounted() {
@@ -21566,9 +21565,7 @@ var render = function() {
                               : _vm._e()
                           ])
                         ]),
-                        _vm._v(
-                          "\n                                div\n                                "
-                        ),
+                        _vm._v(" "),
                         _c("div", { staticClass: "py-6" }, [
                           _vm._m(4),
                           _vm._v(" "),
@@ -21906,8 +21903,8 @@ var render = function() {
                           {
                             name: "show",
                             rawName: "v-show",
-                            value: _vm.isActive,
-                            expression: "isActive"
+                            value: !_vm.isActive,
+                            expression: "!isActive"
                           }
                         ]
                       },
@@ -38864,7 +38861,8 @@ module.exports = g;
  */
 // require('./bootstrap');
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+window.axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js"); // axios.defaults.baseURL = ''
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
